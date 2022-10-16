@@ -4,8 +4,8 @@ function start() {
 
 function loop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    player.update()
-    requestAnimationFrame(animate);
+    player.update();
+    requestAnimationFrame(loop);
 }
 
 start();

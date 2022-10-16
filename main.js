@@ -1,1 +1,3 @@
-console.log("I like yin jing")
+function main() {
+    
+}

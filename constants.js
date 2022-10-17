@@ -1,0 +1,2 @@
+const MOVE_SPEED = 1;
+const OBSTICLE_SIZE = 75;

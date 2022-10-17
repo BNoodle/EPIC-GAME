@@ -5,6 +5,7 @@ function Player(x, y, width, height){
     this.height = height;
 
     this.update = function (){
-        ctx.fillRect(x, y, width, height)
+        ctx.fillStyle = "blue";
+        ctx.fillRect(x, y, width, height);
     }
 }

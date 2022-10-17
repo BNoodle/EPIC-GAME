@@ -1,11 +1,11 @@
 function start() {
-    obsticles = []
+    obsticles = [new Obsticle()]
     player = new Player(PLAYER_X, 300, PLAYER_SIZE, PLAYER_SIZE);
 }
 
 function loop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    obsticle.update();
+    obsticles[0].update();
     player.update();
 
     // draw ground

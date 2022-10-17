@@ -6,3 +6,4 @@ function Obsticle(){
         this.x -= MOVE_SPEED;
     }
 }
+

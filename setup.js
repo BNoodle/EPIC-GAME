@@ -1,8 +1,8 @@
 //setup canvas and context
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext('2d');
-canvas.width = 1200;
-canvas.height = 675;
+canvas.width = GAME_WIDTH;
+canvas.height = GAME_HEIGHT;
 
 // get keys that are pressed
 keys = {}

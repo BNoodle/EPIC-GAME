@@ -5,3 +5,5 @@ const PLAYER_SIZE = 75;
 const PLAYER_X = 75;
 const GRAVITY = -1; //pixels per frame
 const JUMP_VELOCITY = 20;
+const GAME_WIDTH = 1200;
+const GAME_HEIGHT = 675

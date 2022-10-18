@@ -8,7 +8,7 @@ function Player(x, y, width, height){
 
     this.update = function (keys){
         // jump if space is pressed
-        if ((" " in keys || mouseDown === true) && this.onGround === true) {
+        if ((" " in keys || mouseDown === true || touchDown === true) && this.onGround === true) {
             this.vy = JUMP_VELOCITY;
         }
 

@@ -17,8 +17,16 @@ addEventListener('keyup', function (event) {
 let mouseDown = false;
 addEventListener("mousedown", function(event) {
     mouseDown = true;
-    console.log('hi')
 })
 addEventListener('mouseup', function(event){
     mouseDown = false;
+})
+
+// get touch
+let touchDown = false;
+addEventListener("touchstart", function(event) {
+    touchDown = true;
+})
+addEventListener('touchend', function(event){
+    touchDown = false;
 })

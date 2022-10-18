@@ -7,3 +7,4 @@ const GRAVITY = -1; //pixels per frame
 const JUMP_VELOCITY = 20;
 const GAME_WIDTH = 1200;
 const GAME_HEIGHT = 675
+const FPS = 60

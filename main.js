@@ -15,10 +15,12 @@ function loop() {
 
     // check for collisions with obsticles
     if (obsticles[0].isInsideHitbox(player.x, player.y) || obsticles[0].isInsideHitbox(player.x + PLAYER_SIZE, player.y) || obsticles[0].isInsideHitbox(player.x + PLAYER_SIZE, player.y + PLAYER_SIZE) || obsticles[0].isInsideHitbox(player.x, player.y + PLAYER_SIZE)){
-        // die
+        console.log("yoyoyo")
     }
 
-    requestAnimationFrame(loop);
+    setTimeout(() => {
+        requestAnimationFrame(loop);
+      }, 1000 / FPS);
 }
 
 start();

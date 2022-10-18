@@ -15,3 +15,4 @@ const PLAYER_X = GAME_HEIGHT * 75/675;
 const GRAVITY = GAME_HEIGHT * -1/675; //pixels per frame
 const JUMP_VELOCITY = GAME_HEIGHT * 20/675;
 const FPS = 60
+const OBSTICLE_SPAWN_RATE = 60 // in fps

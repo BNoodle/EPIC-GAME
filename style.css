@@ -4,5 +4,13 @@
 
 #canvas1 {
     position: absolute;
-    border: 1px black solid;
+    border: none;
+    background-color: white;
+}
+
+body {
+    display: flex;
+    background-color: grey;
+    flex-direction: row;
+    justify-content: center;
 }

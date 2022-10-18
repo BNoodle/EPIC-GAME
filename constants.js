@@ -1,4 +1,4 @@
-const MOVE_SPEED = 1;
+const SCROLL_SPEED = 1;
 const OBSTICLE_SIZE = 75;
 const GROUND_HEIGHT = 100;
 const PLAYER_SIZE = 75;

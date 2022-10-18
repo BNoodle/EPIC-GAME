@@ -5,10 +5,20 @@ canvas.width = GAME_WIDTH;
 canvas.height = GAME_HEIGHT;
 
 // get keys that are pressed
-keys = {}
+const keys = {}
 addEventListener('keydown', function (event) {
     keys[event.key] = true;
 })
 addEventListener('keyup', function (event) {
     delete keys[event.key];
+})
+
+// get is mouse down
+let mouseDown = false;
+addEventListener("mousedown", function(event) {
+    mouseDown = true;
+    console.log('hi')
+})
+addEventListener('mouseup', function(event){
+    mouseDown = false;
 })

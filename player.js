@@ -29,4 +29,8 @@ function Player(x, y, width, height){
         ctx.fillStyle = "blue";
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
+
+    this.die = function (){
+        location.reload();
+    }
 }

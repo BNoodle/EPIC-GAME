@@ -10,8 +10,8 @@ function Player(x, y, width, height){
         this.y -= this.vy
 
         if (this.y+this.height > canvas.height-GROUND_HEIGHT) {
-            this.y = canvas.height-GROUND_HEIGHT-this.height
-            this.vy = 0
+            this.y = canvas.height-GROUND_HEIGHT-this.height;
+            this.vy = 0;
         }
 
         // draw player on screen

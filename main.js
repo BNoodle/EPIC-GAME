@@ -1,11 +1,11 @@
-function start() {
-    obsticles = [new Obsticle()]
-    player = new Player(PLAYER_X, 450, PLAYER_SIZE, PLAYER_SIZE);
-}
+//start
+const obsticles = [new Obsticle()]
+const player = new Player(PLAYER_X, 450, PLAYER_SIZE, PLAYER_SIZE);
 
 function loop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
+    // update stuff
     obsticles[0].update();
     player.update(keys);
 
@@ -18,10 +18,10 @@ function loop() {
         // die
     }
 
+    // scuffed FPS cap
     setTimeout(() => {
         requestAnimationFrame(loop);
       }, 1000 / FPS);
 }
 
-start();
 loop();

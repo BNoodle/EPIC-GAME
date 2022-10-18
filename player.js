@@ -3,15 +3,26 @@ function Player(x, y, width, height){
     this.height = height;
     this.x = x;
     this.y = y;
-    this.vy = 0
+    this.vy = 0;
+    this.onGround = false;
 
-    this.update = function (){
-        this.vy += GRAVITY
-        this.y -= this.vy
+    this.update = function (keys){
+        // jump if space is pressed
+        if (" " in keys && this.onGround === true) {
+            this.vy = JUMP_VELOCITY;
+        }
 
+        // do gravity
+        this.vy += GRAVITY;
+        this.y -= this.vy;
+
+        // ground collision
         if (this.y+this.height > canvas.height-GROUND_HEIGHT) {
             this.y = canvas.height-GROUND_HEIGHT-this.height;
             this.vy = 0;
+            this.onGround = true;
+        } else {
+            this.onGround = false;
         }
 
         // draw player on screen

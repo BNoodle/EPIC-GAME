@@ -5,8 +5,9 @@ function start() {
 
 function loop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
     obsticles[0].update();
-    player.update();
+    player.update(keys);
 
     // draw ground
     ctx.fillStyle = "black";

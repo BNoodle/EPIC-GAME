@@ -1,5 +1,12 @@
-const GAME_HEIGHT = window.innerHeight;
-const GAME_WIDTH = GAME_HEIGHT * 16/9
+let GAME_WIDTH;
+let GAME_HEIGHT;
+if (window.innerWidth/window.innerHeight >= 16/9){
+    GAME_HEIGHT = window.innerHeight;
+    GAME_WIDTH = GAME_HEIGHT * 16/9;
+} else{
+    GAME_WIDTH = window.innerWidth;
+    GAME_HEIGHT = GAME_WIDTH * 9/16;
+}
 const SCROLL_SPEED = GAME_HEIGHT * 10/675;
 const OBSTICLE_SIZE = GAME_HEIGHT * 75/675;
 const GROUND_HEIGHT = GAME_HEIGHT * 100/675;

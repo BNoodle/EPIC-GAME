@@ -1,10 +1,10 @@
-const SCROLL_SPEED = 10;
-const OBSTICLE_SIZE = 75;
-const GROUND_HEIGHT = 100;
-const PLAYER_SIZE = 75;
-const PLAYER_X = 75;
-const GRAVITY = -1; //pixels per frame
-const JUMP_VELOCITY = 20;
 const GAME_HEIGHT = window.innerHeight;
 const GAME_WIDTH = GAME_HEIGHT * 16/9
+const SCROLL_SPEED = GAME_HEIGHT * 10/675;
+const OBSTICLE_SIZE = GAME_HEIGHT * 75/675;
+const GROUND_HEIGHT = GAME_HEIGHT * 100/675;
+const PLAYER_SIZE = GAME_HEIGHT * 75/675;
+const PLAYER_X = GAME_HEIGHT * 75/675;
+const GRAVITY = GAME_HEIGHT * -1/675; //pixels per frame
+const JUMP_VELOCITY = GAME_HEIGHT * 20/675;
 const FPS = 60

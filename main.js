@@ -1,13 +1,17 @@
 //start
-const obsticles = [new Obsticle()]
+const obsticles = [new Obsticle()];
 const player = new Player(PLAYER_X, 450, PLAYER_SIZE, PLAYER_SIZE);
+const stonks = new Stonks();
 
 function loop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    
     
     // update stuff
     obsticles[0].update();
     player.update(keys);
+    stonks.update();
 
     // draw ground
     ctx.fillStyle = "black";
@@ -17,6 +21,8 @@ function loop() {
     if (obsticles[0].isInsideHitbox(player.x, player.y) || obsticles[0].isInsideHitbox(player.x + PLAYER_SIZE, player.y) || obsticles[0].isInsideHitbox(player.x + PLAYER_SIZE, player.y + PLAYER_SIZE) || obsticles[0].isInsideHitbox(player.x, player.y + PLAYER_SIZE)){
         player.die();
     }
+
+    
 
     // scuffed FPS cap
     setTimeout(() => {

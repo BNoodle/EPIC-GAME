@@ -20,8 +20,9 @@ function loop() {
     
     // update player
     player.update(keys);
-
+    
     // update obsticles
+    const obsticlesToRemove = []
     for (let obsticle of obsticles) {
         // update obsticles
         obsticle.update()
@@ -30,6 +31,17 @@ function loop() {
         if (obsticle.isInsideHitbox(player.x, player.y) || obsticle.isInsideHitbox(player.x + PLAYER_SIZE, player.y) || obsticle.isInsideHitbox(player.x + PLAYER_SIZE, player.y + PLAYER_SIZE) || obsticle.isInsideHitbox(player.x, player.y + PLAYER_SIZE)){
             player.die();
         }
+
+        // find obsticles to despawn
+        if (obsticle.x+OBSTICLE_SIZE < 0) {
+            obsticlesToRemove.push(obsticles[obsticles.findIndex(object => {
+                return object === obsticle;
+            })]);
+        }
+    }
+    //actually despawn the obsticles
+    for (let i of obsticlesToRemove) {
+        obsticles.splice(i, 1)
     }
 
 
